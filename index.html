@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General Shop</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white font-sans">
+
+
+<!-- HEADER -->
+
+<header class="bg-white sticky top-0 z-50 pb-2">
+  <div class="container mx-auto py-4 px-4 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="index.html" class="text-2xl font-bold text-gray-900">
+      <img class="w-20" src="assets/images/logo.jpg" alt="">
+    </a>
+    
+
+
+
+    <!-- Desktop Icons -->
+    <div class="flex items-center space-x-4">
+      <button class="text-gray-800 hover:text-red-600">🔍</button>
+      <button class="text-gray-800 hover:text-red-600">👤</button>
+      <button class="relative text-gray-800 hover:text-red-600">
+        🛒
+        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
+      </button>
+    </div>
+
+    <!-- Hamburger mobile -->
+    <button id="mobile-menu-btn" class="md:hidden text-2xl text-gray-800">☰</button>
+
+  </div>
+
+  <!-- Desktop Menu -->
+  <nav class="hidden md:flex mt-4 flex-wrap justify-center gap-4 m-6">
+    <ul class="flex flex-wrap justify-center gap-6 w-full">
+      <li><a href="#" class="hover:text-red-600 font-medium">Sale</a></li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Nicotine <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Hemp <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          CBD <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Detox <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Exotic Snacks <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Batteries <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Roll Your Own <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Vaporizers <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Glass <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Storage <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Dab Rigs <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Adult Toys <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          DubCharge <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li><a href="#" class="hover:text-red-600 font-medium">Mods</a></li>
+    </ul>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40">
+    <div class="bg-white w-64 h-full p-4 overflow-auto">
+      <button id="mobile-menu-close" class="text-gray-800 mb-4 text-xl">✕ Close</button>
+      <ul class="space-y-3">
+        <li><a href="#" class="font-medium">Sale</a></li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Nicotine <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Hemp <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            CBD <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Detox <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Exotic Snacks <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Batteries <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Roll Your Own <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Vaporizers <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Glass <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Storage <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Dab Rigs <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Adult Toys <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            DubCharge <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li><a href="#" class="font-medium">Mods</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<script>
+// Mobile menu toggle
+const mobileBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileClose = document.getElementById('mobile-menu-close');
+
+mobileBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+mobileClose.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+
+// Dropdown toggle on mobile
+function toggleDropdown(btn) {
+  const ul = btn.nextElementSibling;
+  ul.classList.toggle('hidden');
+}
+</script>
+
+
+
+<!-- Continuous Shipping Banner -->
+<div class="bg-blue-600 overflow-hidden relative p-2">
+  <div class="flex animate-marquee">
+    <span class="whitespace-nowrap text-white font-bold py-2">
+      - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Free Discreet Shipping When You Spend $50+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Free Discreet Shipping When You Spend $50+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Free Discreet Shipping When You Spend $50+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+    </span>
+    <!-- duplicate for smooth continuous effect -->
+    <span class="whitespace-nowrap text-white font-bold py-2">
+      - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Free Discreet Shipping When You Spend $50+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Free Discreet Shipping When You Spend $50+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Free Discreet Shipping When You Spend $50+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -
+    </span>
+  </div>
+</div>
+
+<style>
+  /* Continuous marquee animation */
+  @keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee {
+    display: inline-flex;
+    width: max-content;
+    animation: marquee 15s linear infinite;
+  }
+</style>
+
+
+
+<!-- Image Section Responsive -->
+<section class="container mx-auto p-4">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 grid-rows-3 gap-4">
+
+    <!-- 1ère image : prend 2 colonnes sur desktop, 2 lignes sur desktop, 1 col sur mobile/tablette -->
+    <div class="col-span-1 sm:col-span-2 lg:col-span-2 row-span-1 sm:row-span-2">
+      <img src="assets/images/main1.webp" alt="Image 1" class="w-full h-full object-cover rounded-lg">
+    </div>
+
+    <!-- 2ème image -->
+    <div class="col-span-1 row-span-1">
+      <img src="assets/images/main2.webp" alt="Image 2" class="w-full h-full object-cover rounded-lg">
+    </div>
+
+    <!-- 3ème image -->
+    <div class="col-span-1 row-span-1">
+      <img src="assets/images/main3.webp" alt="Image 3" class="w-full h-full object-cover rounded-lg">
+    </div>
+
+    <!-- 4ème image -->
+    <div class="col-span-1 sm:col-span-2 row-span-1">
+      <img src="assets/images/main4.webp" alt="Image 4" class="w-full h-full object-cover rounded-lg">
+    </div>
+
+    <!-- 5ème à 8ème images : troisième rangée sur desktop, s’adapte sur mobile/tablette -->
+    <div class="col-span-1 row-span-1">
+      <img src="assets/images/main5.webp" alt="Image 5" class="w-full h-full object-cover rounded-lg">
+    </div>
+    <div class="col-span-1 row-span-1">
+      <img src="assets/images/main6.webp" alt="Image 6" class="w-full h-full object-cover rounded-lg">
+    </div>
+    <div class="col-span-1 row-span-1">
+      <img src="assets/images/main7.webp" alt="Image 7" class="w-full h-full object-cover rounded-lg">
+    </div>
+    <div class="col-span-1 row-span-1">
+      <img src="assets/images/main8.webp" alt="Image 8" class="w-full h-full object-cover rounded-lg">
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- DubZotics Flower Section -->
+
+<section class="container mx-auto p-8 mt-6">
+  <h2 class="text-3xl font-bold mb-6 text-gray-900">DubZotics Flower</h2>
+
+  <div class="grid grid-cols-2 sm:grid-cols-5 gap-6">
+
+    <!-- 1 -->
+    <div class="text-center">
+      <img src="https://generalsmokeshops.com/cdn/shop/files/WatermelonPunch.png?v=1765831694&width=2000" alt="DubZotics Watermelon Punch THC-A Flower" class="w-full h-48 object-cover rounded-lg mb-2">
+      <h3 class="text-gray-900 font-medium text-sm">DubZotics Watermelon Punch THC-A Flower</h3>
+      <p class="text-red-600 font-bold text-sm">From $9.99</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="text-center">
+      <img src="https://generalsmokeshops.com/cdn/shop/files/GrapeZoda.png?v=1765831231&width=2000" alt="DubZotics Grape Zoda THC-A Flower" class="w-full h-48 object-cover rounded-lg mb-2">
+      <h3 class="text-gray-900 font-medium text-sm">DubZotics Grape Zoda THC-A Flower</h3>
+      <p class="text-red-600 font-bold text-sm">From $9.99</p>
+    </div>
+
+    <!-- 3 -->
+    <div class="text-center">
+      <img src="https://generalsmokeshops.com/cdn/shop/files/CosmicCrisp.jpg?v=1765828278&width=2000" alt="DubZotics Cosmic Crisp THC-A Flower" class="w-full h-48 object-cover rounded-lg mb-2">
+      <h3 class="text-gray-900 font-medium text-sm">DubZotics Cosmic Crisp THC-A Flower</h3>
+      <p class="text-red-600 font-bold text-sm">From $14.99</p>
+    </div>
+
+    <!-- 4 -->
+    <div class="text-center">
+      <img src="https://generalsmokeshops.com/cdn/shop/files/JACK_HERER.png?v=1765832313&width=2000" alt="DubZotics Jack Herer THC-A Flower" class="w-full h-48 object-cover rounded-lg mb-2">
+      <h3 class="text-gray-900 font-medium text-sm">DubZotics Jack Herer THC-A Flower</h3>
+      <p class="text-red-600 font-bold text-sm">From $9.99</p>
+    </div>
+
+    <!-- 5 -->
+    <div class="text-center">
+      <img src="https://generalsmokeshops.com/cdn/shop/files/Vanilla_Fog.png?v=1765831507&width=2000" alt="DubZotics Vanilla Fog THC-A Flower" class="w-full h-48 object-cover rounded-lg mb-2">
+      <h3 class="text-gray-900 font-medium text-sm">DubZotics Vanilla Fog THC-A Flower</h3>
+      <p class="text-red-600 font-bold text-sm">From $9.99</p>
+    </div>
+
+    <!-- 6 -->
+    <div class="text-center">
+      <img src="https://generalsmokeshops.com/cdn/shop/files/moosecake_b470607d-9271-4442-bf7e-f3a10640e63d.jpg?v=1766776813&width=2000" alt="DubZotics Face Off OG THC-A Flower" class="w-full h-48 object-cover rounded-lg mb-2">
+      <h3 class="text-gray-900 font-medium text-sm">DubZotics Face Off OG THC-A Flower</h3>
+      <p class="text-red-600 font-bold text-sm">From $14.99</p>
+    </div>
+
+    <!-- 7 -->
+    <div class="text-center">
+      <img src="https://generalsmokeshops.com/cdn/shop/files/JETFUEL.png?v=1765831977&width=2000" alt="DubZotics Jet Fuel THC-A Flower" class="w-full h-48 object-cover rounded-lg mb-2">
+      <h3 class="text-gray-900 font-medium text-sm">DubZotics Jet Fuel THC-A Flower</h3>
+      <p class="text-red-600 font-bold text-sm">From $9.99</p>
+    </div>
+
+    <!-- 8 -->
+    <div class="text-center">
+      <img src="https://generalsmokeshops.com/cdn/shop/files/LayerCake_2.jpg?v=1765828820&width=2000" alt="DubZotics Layer Cake THC-A Flower" class="w-full h-48 object-cover rounded-lg mb-2">
+      <h3 class="text-gray-900 font-medium text-sm">DubZotics Layer Cake THC-A Flower</h3>
+      <p class="text-red-600 font-bold text-sm">From $14.99</p>
+    </div>
+
+    <!-- 9 -->
+    <div class="text-center">
+      <img src="https://generalsmokeshops.com/cdn/shop/files/JuicyFruit.jpg?v=1765827936&width=2000" alt="DubZotics Juicy Fruit THC-A Flower" class="w-full h-48 object-cover rounded-lg mb-2">
+      <h3 class="text-gray-900 font-medium text-sm">DubZotics Juicy Fruit THC-A Flower</h3>
+      <p class="text-red-600 font-bold text-sm">From $14.99</p>
+    </div>
+
+    <!-- 10 -->
+    <div class="text-center">
+      <img src="https://generalsmokeshops.com/cdn/shop/files/ice_cream_cake_6dcce054-fbb8-47b5-b013-61b5fc9b438b.png?v=1765092272&width=2000" alt="DubZotics Ice Cream Cake THC-A Flower" class="w-full h-48 object-cover rounded-lg mb-2">
+      <h3 class="text-gray-900 font-medium text-sm">DubZotics Ice Cream Cake THC-A Flower</h3>
+      <p class="text-red-600 font-bold text-sm">From $9.99</p>
+    </div>
+
+  </div>
+</section>
+
+
+</body>
+</html>

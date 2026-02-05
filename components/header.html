@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header Example</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white font-sans">
+
+<header class="bg-white sticky top-0 z-50 shadow-md">
+  <div class="container mx-auto py-4 px-4 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="index.html" class="text-2xl font-bold text-gray-900">General Smoke Shops</a>
+
+    <!-- Desktop Icons -->
+    <div class="hidden md:flex items-center space-x-4">
+      <button class="text-gray-800 hover:text-red-600">🔍</button>
+      <button class="text-gray-800 hover:text-red-600">👤</button>
+      <button class="relative text-gray-800 hover:text-red-600">
+        🛒
+        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
+      </button>
+    </div>
+
+    <!-- Hamburger mobile -->
+    <button id="mobile-menu-btn" class="md:hidden text-2xl text-gray-800">☰</button>
+
+  </div>
+
+  <!-- Desktop Menu -->
+  <nav class="hidden md:flex mt-4 flex-wrap justify-center gap-4 m-6">
+    <ul class="flex flex-wrap justify-center gap-6 w-full">
+      <li><a href="#" class="hover:text-red-600 font-medium">Sale</a></li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Nicotine <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Hemp <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          CBD <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Detox <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Exotic Snacks <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Batteries <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Roll Your Own <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Vaporizers <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Glass <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Storage <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Dab Rigs <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          Adult Toys <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li class="relative group">
+        <button class="flex items-center font-medium hover:text-red-600">
+          DubCharge <span class="ml-1">&#9662;</span>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 w-48 z-50"></ul>
+      </li>
+      <li><a href="#" class="hover:text-red-600 font-medium">Mods</a></li>
+    </ul>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40">
+    <div class="bg-white w-64 h-full p-4 overflow-auto">
+      <button id="mobile-menu-close" class="text-gray-800 mb-4 text-xl">✕ Close</button>
+      <ul class="space-y-3">
+        <li><a href="#" class="font-medium">Sale</a></li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Nicotine <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Hemp <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            CBD <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Detox <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Exotic Snacks <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Batteries <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Roll Your Own <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Vaporizers <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Glass <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Storage <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Dab Rigs <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            Adult Toys <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li>
+          <button class="w-full flex justify-between items-center font-medium" onclick="toggleDropdown(this)">
+            DubCharge <span>&#9662;</span>
+          </button>
+          <ul class="hidden pl-4 mt-2 space-y-2"></ul>
+        </li>
+        <li><a href="#" class="font-medium">Mods</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<script>
+// Mobile menu toggle
+const mobileBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileClose = document.getElementById('mobile-menu-close');
+
+mobileBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+mobileClose.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+
+// Dropdown toggle on mobile
+function toggleDropdown(btn) {
+  const ul = btn.nextElementSibling;
+  ul.classList.toggle('hidden');
+}
+</script>
+
+</body>
+</html>
