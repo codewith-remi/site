@@ -540,8 +540,8 @@ function toggleDropdown(btn) {
 <section class="container mx-auto px-6 py-16">
 
   <!-- Titles -->
-  <div class="text-center mb-12">
-    <p class="text-blue-600 font-semibold uppercase tracking-wider text-sm">
+  <div class="mb-12">
+    <p class=" font-semibold uppercase tracking-wider text-sm">
       Shop the Essentials
     </p>
     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3">
@@ -585,6 +585,49 @@ function toggleDropdown(btn) {
   </div>
 
 </section>
+
+
+
+<!-- Mystery Boxes Moving Text Section -->
+
+<section class="overflow-hidden bg-white py-10">
+
+  <div class="flex whitespace-nowrap animate-mystery">
+    <!-- Ligne répétée -->
+    <span class="mx-8 text-blue-600 font-extrabold text-5xl md:text-7xl">
+      MYSTERY BOXES
+    </span>
+    <span class="mx-8 text-blue-600 font-extrabold text-5xl md:text-7xl">
+      MYSTERY BOXES
+    </span>
+    <span class="mx-8 text-blue-600 font-extrabold text-5xl md:text-7xl">
+      MYSTERY BOXES
+    </span>
+    <span class="mx-8 text-blue-600 font-extrabold text-5xl md:text-7xl">
+      MYSTERY BOXES
+    </span>
+    <span class="mx-8 text-blue-600 font-extrabold text-5xl md:text-7xl">
+      MYSTERY BOXES
+    </span>
+    <span class="mx-8 text-blue-600 font-extrabold text-5xl md:text-7xl">
+      MYSTERY BOXES
+    </span>
+  </div>
+
+</section>
+
+<style>
+@keyframes mysteryScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-mystery {
+  width: max-content;
+  animation: mysteryScroll 18s linear infinite;
+}
+</style>
+
 
 
 
