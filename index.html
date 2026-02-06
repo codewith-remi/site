@@ -7,7 +7,7 @@
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white font-sans">
+<body class="bg-white font-sans overflow-x-hidden">
 
 
 <!-- HEADER -->
@@ -1673,7 +1673,7 @@ function toggleDropdown(btn) {
     <div class="flex flex-col lg:flex-row gap-4">
 
       <!-- Thumbnails -->
-      <div class="
+      <!-- <div class="
         order-2 lg:order-1
         flex lg:flex-col
         gap-3
@@ -1682,7 +1682,20 @@ function toggleDropdown(btn) {
         overflow-y-hidden
         pr-0 lg:pr-2
         pb-2
-      ">
+      "> -->
+
+      <div class="
+  order-2 lg:order-1
+  flex lg:flex-col
+  gap-3
+  h-auto lg:h-[520px]
+  overflow-x-auto lg:overflow-y-auto
+  overflow-y-hidden
+  pr-0 lg:pr-2
+  pb-2
+  touch-pan-x
+">
+
 
         <!-- thumbs -->
         <!-- IMPORTANT: keep thumb + data-name -->
@@ -1733,7 +1746,7 @@ function toggleDropdown(btn) {
       <div class="order-1 lg:order-2 flex-1">
         <img id="mainImage"
              src="https://generalsmokeshops.com/cdn/shop/files/berrydreamy3.webp?v=1761850872&width=750"
-             class="w-full h-[380px] sm:h-[450px] lg:h-[520px] object-cover rounded-xl transition duration-300">
+             class="w-full h-auto max-h-[70vh] object-cover rounded-xl">
       </div>
 
     </div>
