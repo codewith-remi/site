@@ -1787,10 +1787,10 @@ If it’s been 7 days since shipment with no tracking updates, feel free to reac
   </div>
 </section>
 
-<section class="text-center">
+<section class="text-center p-10">
   <div class="text-black-600">
-    Our customer support team is available Monday through Friday, from 9:00 AM to 3:00 PM CST, via chat</div>
-    <span class="text-gray-700">.Average answer time: 24h</span>
+    Our customer support team is available Monday through Friday, from 9:00 AM to 3:00 PM CST, via chat.</div>
+    <span class="text-gray-700">Average answer time: 24h</span>
 </section>
 
 <script>
@@ -1824,6 +1824,109 @@ If it’s been 7 days since shipment with no tracking updates, feel free to reac
 </script>
 
 
+
+
+<!-- FOOTER -->
+
+<footer class="mt-16">
+  <div class="max-w-7xl mx-auto px-6 py-14">
+
+    <!-- GRID FIX -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-10">
+
+      <!-- SHOP -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Shop</h3>
+        <ul class="space-y-2 text-gray-600">
+          <li><a href="#" class="hover:text-black">Nicotine</a></li>
+          <li><a href="#" class="hover:text-black">Hemp</a></li>
+          <li><a href="#" class="hover:text-black">Batteries</a></li>
+          <li><a href="#" class="hover:text-black">Roll Your Own</a></li>
+          <li><a href="#" class="hover:text-black">Vaporizers</a></li>
+          <li><a href="#" class="hover:text-black">Dab Rigs</a></li>
+          <li><a href="#" class="hover:text-black">DubCharge</a></li>
+          <li><a href="#" class="hover:text-black">Glass</a></li>
+          <li><a href="#" class="hover:text-black">Adult Toys</a></li>
+        </ul>
+      </div>
+
+      <!-- SUPPORT -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Support</h3>
+        <ul class="space-y-2 text-gray-600">
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Order Status</a></li>
+          <li><a href="#">Shipping FAQ</a></li>
+          <li><a href="#">Secured Shopping</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Route Claims</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </div>
+
+      <!-- PARTNER -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Partner With Us</h3>
+        <ul class="space-y-2 text-gray-600">
+          <li><a href="#">Affiliate Login</a></li>
+          <li><a href="#">Affiliate Register</a></li>
+        </ul>
+      </div>
+
+      <!-- RIGHT SIDE -->
+<div class="md:pl-8 col-span-2 md:col-span-1">
+
+  <!-- LOGO -->
+  <img src="assets/images/logo.jpg"
+       alt="Logo"
+       class=" mb-4 object-contain block">
+
+  <p class="text-gray-700 font-medium mb-4">
+    Subscribe to our email for a 5% discount on your next order!
+  </p>
+
+  <div class="relative w-full max-w-md">
+    <input
+      id="footerEmail"
+      type="email"
+      placeholder="Enter your email"
+      class="w-full border border-gray-300 rounded-lg px-4 py-3 pr-12 focus:outline-none focus:ring-2 focus:ring-black"
+    />
+
+    <button
+      id="subscribeBtn"
+      class="absolute right-2 top-1/2 -translate-y-1/2 bg-black text-white rounded-md p-2 hover:bg-gray-800 transition">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M5 12h14M13 6l6 6-6 6"/>
+      </svg>
+    </button>
+  </div>
+
+  <p id="subMsg" class="text-sm text-green-600 mt-3 hidden">
+    Subscribed successfully
+  </p>
+
+</div>
+
+
+    </div>
+
+  </div>
+</footer>
+
+
+<script>
+  document.getElementById("subscribeBtn").addEventListener("click", function () {
+    const email = document.getElementById("footerEmail").value.trim();
+    if (email && email.includes("@")) {
+      document.getElementById("subMsg").classList.remove("hidden");
+      document.getElementById("footerEmail").value = "";
+    }
+  });
+</script>
 
 </body>
 </html>
